@@ -1,0 +1,11 @@
+@layout('main')
+
+@section('content')
+  <h1>Home</h1>
+  <p>Welcome to the Castalise Test</p>
+  <ul class="list-group">
+    @each(person in persons)
+      <li class="list-group-item"><a href="/person/{{person.id}}">{{ person.email }}</a></li>
+    @endeach
+  </ul>
+@endsection

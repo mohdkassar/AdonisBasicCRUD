@@ -1,0 +1,18 @@
+@layout('main')
+
+@section('content')
+  <h1>User HomePage</h1>
+  <p>Welcome to the Castalise Test</p>
+  <h3>Recommended Friends List </h3>
+  <table class="table">
+    @each(person in list)
+    <tr>
+        <th class="list-group-item">{{ person.email }}</a></th>
+        <td><a href='/person/friend/add?id={{id}}&following={{person.id}}' class="btn btn-primary">Add Friend</button></td>  
+        </tr>
+    @endeach
+  </table>
+  <a href="/person/friends/{{id}}">Friends List</a>
+  <h2></h2>
+  <a href="/users">List of Users Page</a>
+@endsection
